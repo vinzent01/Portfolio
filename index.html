@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Vinzent</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Vinzent.One</h1>
+            <nav>
+                <a href="#about">Sobre Mim</a>
+                <a href="#projects">Projetos</a>
+                <a href="#skills">Habilidades</a>
+                <a href="#contact">Contato</a>
+            </nav>
+        </header>
+    
+        <main>
+            <section id="about">
+                <h2>Sobre Mim</h2>
+                <p>Sou um desenvolvedor apaixonado por criar experiências interativas e sistemas eficientes. Tenho experiência em programação de jogos, desenvolvimento de sistemas customizados e design de mecânicas de gameplay. Meu foco é entregar soluções criativas e funcionais.</p>
+            </section>
+
+            <section id="projects">
+                <h2>Projetos</h2>
+                <div class="projects">
+                    <div class="project">
+                        <img class="project-img" src="https://github.com/vinzent01/DarkAgesRPG2D/raw/main/screenshot000.png">
+                        <h3>RPG Personalizado</h3>
+                        <p>Um RPG top-down com sistema de crafting, alquimia e liberdade para os jogadores explorarem um mundo realista.</p>
+                    </div>
+                    <div class="project">
+                        <h3>Sistema de Magias Elementais</h3>
+                        <p>Desenvolvimento de magias baseadas nos elementos de fogo, água e ar, com níveis de poder escaláveis.</p>
+                    </div>
+                    <div class="project">
+                        <h3>Gerenciador de Pacotes</h3>
+                        <p>Sistema para suporte a mods e mixins, permitindo sobreposição e adição de conteúdos no jogo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>Habilidades</h2>
+                <div class="skills">
+                    <div class="skill">
+                        <h3>Linguagens de Programação</h3>
+                        <p>C#, Python, JavaScript</p>
+                    </div>
+                    <div class="skill">
+                        <h3>Desenvolvimento de Jogos</h3>
+                        <p>MonoGame, sistemas customizados, mecânicas de RPG</p>
+                    </div>
+                    <div class="skill">
+                        <h3>Interface Gráfica</h3>
+                        <p>Criação de GUIs interativas e responsivas</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contato</h2>
+                <p>Email: vinzent0101@gmail.com</p>
+                <p>GitHub: <a href="https://github.com/vinzent01">https://github.com/vinzent01</a></p>
+            </section>
+            
+
+        </main>
+    
+        <footer>
+            <p>&copy; 2025 Vinzent. Todos os direitos reservados.</p>
+        </footer>    
+    </div>
+    
+    <script
+			src="https://code.jquery.com/jquery-3.7.1.js"
+			integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+			crossorigin="anonymous"></script>
+    <script>
+        $(document).ready( function (){
+            $("#current-page").load("pages/about.html");
+        }) 
+
+        function loadPage(str){
+            $("#current-page").load("./pages/"+str);
+            alert(str);
+        }
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+:root {
+    --bg-color : #fff;
+    --primary-color : #2e244b;
+    --primary-color-text : #271d46;
+    --primary-color-darker : #2a1c52;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: var(--primary-color-text);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* A wrapper ocupa toda a altura da tela */
+}
+
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+nav {
+    margin: 1rem 0;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+}
+main {
+    width: 90%;
+    flex: 1;
+    max-width: 1100px;
+    margin: 2rem auto;
+}
+section {
+    margin-bottom: 3rem;
+}
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+}
+.projects, .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.project, .skill {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    flex: 1 1 calc(33.333% - 1rem);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-img{
+    max-width: 100%;
+}
+
+.project h3, .skill h3 {
+    margin-top: 0;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary-color-darker);
+    color: #fff;
+}
+
+.nav-button {
+    cursor: pointer;
+}
