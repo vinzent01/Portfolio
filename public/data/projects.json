@@ -1,0 +1,52 @@
+[
+    {
+        "title" : "OneCode Website",
+        "descriptions" :{
+            "pt" : "Um site de blog de programação feito com Next.js, Typescript e React. O site é responsivo e possui um design moderno, com animações suaves e uma navegação intuitiva, temas claro e escuro.",
+            "en" : "A programming blog site made with Next.js, Typescript and React. The site is responsive and has a modern design, with smooth animations and intuitive navigation, light and dark themes."
+        },
+        "images" : [
+            {
+                "src" : "/images/projects/onecode-1.png",
+                "alt" : "OneCode Website black theme"
+            },
+            {
+                "src" : "/images/projects/onecode-2.png",
+                "alt" : "OneCode Website white theme"
+            }
+        ],
+        "stack" : [
+            "Next.js",
+            "Typescript",
+            "React"
+        ]
+    },
+    {
+        "title": "Project Affinity",
+        "descriptions" : {
+            "pt" : "Um site local e aplicativo desktop de RPG textual com integração com I.A ollama com api do Grok, onde a I.A gera a história e o jogador pode interagir com ela. O projeto foi desenvolvido com Electron and vanilla JS.",
+            "en" : "A local website and desktop RPG text application with integration with I.A ollama with Grok api, where the I.A generates the story and the player can interact with it. The project was developed with Electron and vanilla JS."
+        },
+        "images" : [
+            {
+                "src" : "/images/projects/project-affinity.png",
+                "alt" : "project affinity webiste "
+            }
+        ],
+        "stack" : [
+            "Electron",
+            "javascript"
+        ]
+    },
+    {
+        "title": "Portfolio",
+        "descriptions" : {
+            "pt" : "Meu portfólio pessoal, feito com React.Js. O site é responsivo e possui um design moderno, com animações suaves e uma navegação intuitiva e possui todos os meus projetos listados.",
+            "en" : "My personal portfolio, made with React.Js. The site is responsive and has a modern design, with smooth animations and intuitive navigation and has all my projects listed."
+        },
+        "stack" : [
+            "React",
+            "Javascript"
+        ]
+    }
+]
