@@ -27,7 +27,6 @@ function App() {
   }
 
   useEffect( () => {
-    document.title = "Vinzent - Portfolio";
     
     GetAllProjects().then((data) => {
       setProjects(data);
@@ -36,6 +35,7 @@ function App() {
 
   return (
     <div className="App">
+      <title>Portfólio </title>
       <meta property="og:title" content="Portfólio" />
       <meta property="og:description" content="Site de portfólio" />
 
