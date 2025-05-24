@@ -1,38 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import { useSearchParams } from 'react-router'
-import logo from './logo.svg';
-import './css/App.css';
 import { GetAllProjects } from './GetData';
-
-function ProjectList({projects} : {projects: []}){
-  return (
-    <div className="projects-list">
-      {projects.map((project : any) => (
-        <>
-          { project.images != undefined && project.images.length > 0 &&
-            <div key={project.title} className="project">
-                <img  alt={project.title} src={project.images[0].src}></img>
-            </div>
-          }
-        </>
-      ))}
-
-    </div>
-  )
-}
-
-function ProjectsSection({projects} : {projects: []}) {
-  return (
-    <section className="projects" id="projetos">
-      <h2 className='highlight'>Projetos</h2>
-      <ProjectList projects={projects}/>
-    </section>
-  )
-}
-
+import './css/App.css';
+import Header from './components/Header';
+import Skill from './components/Skill';
+import ProjectList from './components/ProjectList';
+import ContactList from './components/ContactList';
+import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
 
 function App() {
-  const year = new Date().getFullYear();
   const [searchparams ] = useSearchParams();
   const [projects, setProjects] = useState([]);
 
@@ -48,32 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className='header'>
-        
-        <h2>
-          <a href="#home" className='logo no-highlight'>
-          Vinzent
-          </a>
-        </h2>
-        <nav className='nav'>
-          <ul>
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
-              <a href="#projetos">Projetos</a>
-            </li>
-            {!hideContact && (
-              <li>
-                <a href="#contact">Contato</a>
-              </li>
-            )}
-          </ul>
-        </nav>
-      </header>
+      <Header hideContact={hideContact}/>
 
       <main className='main'>
         <section className="hero" id="home">
@@ -100,25 +52,28 @@ function App() {
         <section className="skills" id="skills">
           <h2 className='highlight'>Skills</h2>
           <div className="skills-list">
-            <div className="skill">
-              <object data="/svg/application-brackets.svg" width={60} height={60}/>
-              <h3>Front-End Development</h3>
-              <p>Habilidades em desenvolvimento frontend com HTML, CSS e Javascript</p>
-            </div>
-            <div className="skill">
-              <img src="/svg/code.svg" width={60} height={60}/>
-              <h3>Back-End Development</h3>
-              <p>Habilidades em desenvolvimento de aplicações Back-End com Node, NextJS e mais.</p>
-            </div>
-            <div className="skill">
-              <img src="/svg/controller.svg" width={60} height={60}/>
-              <h3>Desenvolvimento de Games</h3>
-              <p>proficiente em desenvolvimento de games em C#, Monogame e Raylib</p>
-            </div>
+            <Skill
+              title="Front-End Development"
+              description="Habilidades em desenvolvimento frontend com HTML, CSS e Javascript"
+              icon="/svg/application-brackets.svg"
+            />
+            <Skill
+              title="Back-End Development"
+              description="Habilidades em desenvolvimento de aplicações Back-End com Node, NextJS e mais."
+              icon="/svg/code.svg"
+            />    
+            <Skill
+              title="Desenvolvimento de Games"
+              description="proficiente em desenvolvimento de games em C#, Monogame e Raylib"
+              icon="/svg/controller.svg"
+            />
           </div>
         </section>
 
-        <ProjectsSection projects={projects as []}/>
+        <section className="projects" id="projetos">
+          <h2 className='highlight'>Projetos</h2>
+          <ProjectList projects={projects as []}/>
+        </section>
 
         {!hideContact && (
           <section className="contact" id="contact">
@@ -127,33 +82,13 @@ function App() {
               Se você está interessado em trabalhar comigo ou tem alguma dúvida, sinta-se à vontade para entrar em contato. 
               Estou sempre aberto a novas oportunidades e colaborações.
             </p>
-            <div className="contact-list">
-              <div className='contact-item'>
-                <img src="/svg/email.svg" width={52} height={52}></img> 
-                <a href="mailto:ryan.costasousa@gmail.com" target='_blank'>ryan.costasousa01@gmail.com</a> 
-              </div>
-              <div className='contact-item'>
-                <img src="/svg/github.svg" width={52} height={52}></img> 
-                <a href="https://github.com/vinzent01" target='_blank'>github.com/vinzent01</a>
-              </div>
-            </div>
-            <form className="contact-form">
-              <input type="email" placeholder="Seu email" required />
-              <textarea placeholder="Sua mensagem" required></textarea>
-              <button type="submit">Enviar</button>
-            </form>
+            <ContactList/>
+            <ContactForm />
           </section>
         )}
       </main>
 
-
-      <footer className='footer'>
-        <a href="https://github.com/vinzent01/portfolio" target='_blank'>
-          <img width={40} height={40} src="/svg/github.svg"/>
-        </a>
-        <p>Vinzent &copy; {year}</p>
-
-      </footer>
+    <Footer/>
         
     </div>
   );
