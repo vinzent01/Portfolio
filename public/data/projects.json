@@ -15,10 +15,15 @@
                 "alt" : "OneCode Website white theme"
             }
         ],
-        "stack" : [
-            "Next.js",
-            "Typescript",
-            "React"
+
+        "links" : {
+            "github" : "https://github.com/vinzent01/OneCode",
+            "site" : "https://onecode-six.vercel.app/"
+        },
+        "stacks" : [
+            "/icons/nextjs.png",
+            "/icons/typescript.png",
+            "/icons/react.png"
         ]
     },
     {
@@ -33,9 +38,12 @@
                 "alt" : "project affinity webiste "
             }
         ],
-        "stack" : [
-            "Electron",
-            "javascript"
+        "links" : {
+            "github" : "https://github.com/vinzent01/Project-Affinity"
+        },
+        "stacks" : [
+            "/icons/electron.png",
+            "/icons/javascript.png"
         ]
     },
     {

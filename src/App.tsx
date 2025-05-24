@@ -1,19 +1,31 @@
-import React, {useEffect, useState} from 'react';
+import React, {MouseEventHandler, useEffect, useState} from 'react';
 import { useSearchParams } from 'react-router'
 import { GetAllProjects } from './GetData';
 import './css/App.css';
 import Header from './components/Header';
 import Skill from './components/Skill';
-import ProjectList from './components/ProjectList';
+import ProjectList, { Project } from './components/ProjectList';
 import ContactList from './components/ContactList';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import { al } from 'react-router/dist/development/route-data-B9_30zbP';
+import ProjectContainer from './components/ProjectContainer';
 
 function App() {
   const [searchparams ] = useSearchParams();
   const [projects, setProjects] = useState([]);
+  // currently selected project, if any
+  const [project, setProject] = useState<Project | null>(null);
 
   const hideContact = searchparams.has('hide-contact');
+
+  function OnClickProject(event : React.MouseEvent<HTMLDivElement> , project : Project) {
+    setProject(project);
+  }
+
+  function OnCloseContainer() {
+    setProject(null); 
+  }
 
   useEffect( () => {
     document.title = "Vinzent - Portfolio";
@@ -26,6 +38,10 @@ function App() {
   return (
     <div className="App">
       <Header hideContact={hideContact}/>
+
+      {project && (
+        <ProjectContainer project={project} onClose={OnCloseContainer}/>
+      )}
 
       <main className='main'>
         <section className="hero" id="home">
@@ -72,7 +88,7 @@ function App() {
 
         <section className="projects" id="projetos">
           <h2 className='highlight'>Projetos</h2>
-          <ProjectList projects={projects as []}/>
+          <ProjectList projects={projects as []} onClickProject={OnClickProject}/>
         </section>
 
         {!hideContact && (
@@ -87,9 +103,7 @@ function App() {
           </section>
         )}
       </main>
-
     <Footer/>
-        
     </div>
   );
 }

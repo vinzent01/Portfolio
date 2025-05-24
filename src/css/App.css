@@ -84,6 +84,7 @@ p {
 .project{
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .project img {
@@ -92,7 +93,6 @@ p {
   border-radius: 5px;
   object-fit: cover;
 }
-
 
 .contact-item {
   display: flex;
@@ -168,6 +168,122 @@ p {
   color: var(--var-text-color);
 }
 
+.background {
+    background: rgba(1, 1, 1, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px); /* para Safari */
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.project-container {
+  position: fixed;         /* ou absolute */
+  top: 20px;
+  left: 20vw;
+  right: 20vw;
+  bottom: 20px;;
+  /* NÃO DEFINA width! */
+  padding: 20px;
+  background: var(--var-foreground-color);
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+.project-preview {
+  margin-bottom: 20px;
+}
+
+.project-stacks {
+  display: flex;
+  margin-top: 50px;
+  gap: 10px;
+}
+
+.project-stack {
+  width: 50px;
+  height : 50px;
+  border-radius: 50%;
+}
+
+.project-grid {
+  display: grid;
+  flex-direction: row;
+  gap: 20px;
+  grid-template-columns: 1fr auto;
+}
+
+.project-mobile-images {
+  display: none;
+}
+
+.project-images{
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  height: 100px;
+  width: auto;
+}
+
+.project-images img {
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.project-preview {
+  width: 100%;;
+}
+
+.project-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.project-header h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.project-header .close-button img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-header .close-button{
+  margin-left: auto;
+  padding: 10px;
+}
+
+.project-header button {
+  background-color: transparent;
+  border: none;
+  color: var(--var-text-color);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.project-link {
+  display: flex;
+  flex-direction: row;
+}
+
+.project-link img {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}
+
+.project-link a {
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
 
 @media (max-width: 1400px) {
   .header {
@@ -176,8 +292,11 @@ p {
   .main {
     padding : 20px 10vw;
   }
+  .project-container{
+    left: 10vw;
+    right: 10vw;
+  }
 }
-
 
 @media (max-width: 768px) {
   .header {
@@ -211,6 +330,11 @@ p {
 
   .contact-form {
     width: 100%;
+  }
+
+  .project-container {
+    left: 5vw;
+    right: 5vw;
   }
 
 }
