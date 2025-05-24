@@ -8,7 +8,6 @@ import ProjectList, { Project } from './components/ProjectList';
 import ContactList from './components/ContactList';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-import { al } from 'react-router/dist/development/route-data-B9_30zbP';
 import ProjectContainer from './components/ProjectContainer';
 
 function App() {
@@ -37,6 +36,9 @@ function App() {
 
   return (
     <div className="App">
+      <meta property="og:title" content="Portfólio" />
+      <meta property="og:description" content="Site de portfólio" />
+
       <Header hideContact={hideContact}/>
 
       {project && (
