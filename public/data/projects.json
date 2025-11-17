@@ -47,6 +47,26 @@
         ]
     },
     {
+        "title": "Simple-Ascii",
+        "descriptions" : {
+            "pt" : "Editor de arte de texto ascii com um canvas infinito",
+            "en" : "Infinite canvas ascii art text edtitor"
+        },
+        "images" : [
+            {
+                "src" : "/images/projects/simple-ascii.png",
+                "alt" : "simple-ascii"
+            }
+        ],
+        "links" : {
+            "github" : "https://github.com/vinzent01/simple-ascii"
+        },
+        "stack" : [
+            "Go",
+            "Raylib"
+        ]
+    },
+    {
         "title": "Portfolio",
         "descriptions" : {
             "pt" : "Meu portfólio pessoal, feito com React.Js. O site é responsivo e possui um design moderno, com animações suaves e uma navegação intuitiva e possui todos os meus projetos listados.",
