@@ -61,8 +61,8 @@ function App() {
         <section className="about" id="about">
           <h2 className='highlight'>Sobre mim</h2>
           <p>
-            Olá, meu nome é Ryan da costa sousa e sou um desenvolvedor de software fascinado por criar soluções criativas. 
-            Tenho experiência em desenvolvimento front-end e back-end, além de habilidades em design de jogos. 
+            Olá, meu nome é Ryan da costa sousa e sou um desenvolvedor de softwares. 
+            Tenho experiência em desenvolvimento front-end e back-end, além de habilidades em criações de jogos com a biblioteca Raylib. 
             Estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades.
           </p>
         </section>
