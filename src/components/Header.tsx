@@ -3,7 +3,7 @@ export default function Header({hideContact = false} : {hideContact?: boolean}) 
     <header className='header'>
       <h2>
         <a href="#home" className='logo no-highlight'>
-          Vinzent
+          Ryan C.S
         </a>
       </h2>
       <nav className='nav'>

@@ -1,24 +1,24 @@
 [
     {
-        "title" : "OneCode Website",
+        "title" : "Devlog Website",
         "descriptions" :{
-            "pt" : "Um site de blog de programação feito com Next.js, Typescript e React. O site é responsivo e possui um design moderno, com animações suaves e uma navegação intuitiva, temas claro e escuro.",
-            "en" : "A programming blog site made with Next.js, Typescript and React. The site is responsive and has a modern design, with smooth animations and intuitive navigation, light and dark themes."
+            "pt" : "Um site de blog de programação feito com Next.js, Typescript e React.",
+            "en" : "A programming blog site made with Next.js, Typescript and React"
         },
         "images" : [
             {
-                "src" : "/images/projects/onecode-1.png",
-                "alt" : "OneCode Website black theme"
+                "src" : "/images/projects/devlog-website-1.png",
+                "alt" : "devlog Website posts"
             },
             {
-                "src" : "/images/projects/onecode-2.png",
-                "alt" : "OneCode Website white theme"
+                "src" : "/images/projects/devlog-website-2.png",
+                "alt" : "devlog Website post"
             }
         ],
 
         "links" : {
-            "github" : "https://github.com/vinzent01/OneCode",
-            "site" : "https://onecode-six.vercel.app/"
+            "github" : "https://github.com/vinzent01/DevLog-Blog",
+            "site" : "https://dev-log-blog-lyart.vercel.app/    "
         },
         "stacks" : [
             "/icons/nextjs.png",

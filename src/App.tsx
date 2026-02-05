@@ -101,7 +101,6 @@ function App() {
               Estou sempre aberto a novas oportunidades e colaborações.
             </p>
             <ContactList/>
-            <ContactForm />
           </section>
         )}
       </main>
