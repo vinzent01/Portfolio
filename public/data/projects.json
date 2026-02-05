@@ -2,17 +2,25 @@
     {
         "title" : "Devlog Website",
         "descriptions" :{
-            "pt" : "Um site de blog de programação feito com Next.js, Typescript e React.",
-            "en" : "A programming blog site made with Next.js, Typescript and React"
+            "pt" : "Um site de blog de programação feito com Next.js, Typescript e React. com tema claro e escuro.",
+            "en" : "A programming blog site made with Next.js, Typescript and React. with black and white theme."
         },
         "images" : [
             {
                 "src" : "/images/projects/devlog-website-1.png",
-                "alt" : "devlog Website posts"
+                "alt" : "devlog Website posts black"
             },
             {
                 "src" : "/images/projects/devlog-website-2.png",
-                "alt" : "devlog Website post"
+                "alt" : "devlog Website post black" 
+            },
+            {
+                "src" : "/images/projects/devlog-website-3.png",
+                "alt" : "devlog Website posts white"
+            },
+            {
+                "src" : "/images/projects/devlog-website-4.png",
+                "alt" : "devlog Website post white"
             }
         ],
 
