@@ -3,8 +3,8 @@ export default function Footer(){
 
   return (
     <footer className='footer'>
-        <a href="https://github.com/vinzent01/Portfolio" target='_blank'>
-          <img width={40} height={40} src="/svg/github.svg"/>
+        <a href="https://github.com/vinzent01/Portfolio" target='_blank' rel="noreferrer">
+          <img width={40} height={40} src="/svg/github.svg" alt="github"/>
         </a>
         <p>Vinzent &copy; {year}</p>
     </footer>

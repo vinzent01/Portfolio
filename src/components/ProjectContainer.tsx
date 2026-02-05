@@ -39,7 +39,7 @@ export default function ProjectContainer({project, onClose: closeContainer} : {p
                         {project.images && project.images.map((image, index) => (
                             <img
                                 key={index}
-                                alt={`${project.title} image ${index + 1}`}
+                                alt={`${project.title} ${index + 1}`}
                                 src={image.src}
                                 onClick={() => handleImageClick(image.src)}
                             />

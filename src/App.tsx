@@ -1,4 +1,4 @@
-import React, {MouseEventHandler, useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import { useSearchParams } from 'react-router'
 import { GetAllProjects } from './GetData';
 import './css/App.css';
@@ -6,7 +6,6 @@ import Header from './components/Header';
 import Skill from './components/Skill';
 import ProjectList, { Project } from './components/ProjectList';
 import ContactList from './components/ContactList';
-import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import ProjectContainer from './components/ProjectContainer';
 
